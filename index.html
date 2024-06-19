@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pilmico | Chain Consolidated Report Tool</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />    
+    <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <img src="src/assets/pilmico-goldcoin.png" alt="Pilmico"/>
+        </div>
+        <div class="container form-content">
+            <h3 class="fw-bold text-uppercase">Chain Consolidated Report Tool</h3>
+            <div id="validation-alert" class="alert d-none fw-bold text-light" role="alert"></div>
+            <div class="sections">
+                <div>
+                    <label class="form-label">What do you want to do?</label>
+                    <select id="select-process" class="form-select">
+                        <option value="0">Please select a process</option>
+                        <option value="LOAD">Load</option>
+                        <option value="PURGE">Purge</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sections file-section">
+                <div>
+                    <label class="form-label">Provide the Consolidated Report File:</label>
+                    <input type="file" id="consolidated-file" class="form-control" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+                </div>
+            </div>
+            <div class="sections filter-section">
+                <div class="row">
+                    <div class="col-sm-4 mb-3">
+                        <div>
+                            <label class="form-label">Input a Year</label>
+                            <input type="number" id="input-year" class="form-control" minlength="4" maxlength="4"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3">
+                        <div>
+                            <label class="form-label">Select a Month</label>
+                            <select id="select-month" class="form-select">
+                                <option value="">Please select a month</option>
+                                <option value="JAN">JAN</option>
+                                <option value="FEB">FEB</option>
+                                <option value="MAR">MAR</option>
+                                <option value="APR">APR</option>
+                                <option value="MAY">MAY</option>
+                                <option value="JUNE">JUNE</option>
+                                <option value="JULY">JULY</option>
+                                <option value="AUG">AUG</option>
+                                <option value="SEPT">SEPT</option>
+                                <option value="OCT">OCT</option>
+                                <option value="NOV">NOV</option>
+                                <option value="DEC">DEC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3">
+                        <div>
+                            <label class="form-label">Select a chain</label>
+                            <select id="select-chain" class="form-select">
+                                <option value="">Please select a chain</option>
+                                <option value="ROBINSON">Robinsons</option>
+                                <option value="PUREGOLD">Puregold</option>
+                                <option value="METRO">Metro</option>
+                                <option value="WALTERMART">Waltermart</option>
+                                <option value="WESHOP">Weshop</option>
+                                <option value="MERRYMART">Merrymart</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sections button-section">
+                <div class="row">
+                    <div>
+                        <button id="app-process" class="btn btn-dark text-uppercase fw-bold">Process</button>
+                    </div>
+                    <div>
+                        <button id="app-exit" class="btn btn-outline-light text-uppercase fw-bold">Exit</button>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="src/scripts/script.js"></script>
+</body>
+</html>
